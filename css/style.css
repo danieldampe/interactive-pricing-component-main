@@ -1,0 +1,95 @@
+/* 
+// *** *** *** Custom Properties *** *** *** 
+*/
+:root {
+    /* *** Layout *** */
+    --w-mob-layout: 375px;
+    --w-desk-layout: 1440px;
+    /* *** Font *** */
+    --font-family: "Manrope", sans-serif; /* Weights: 600, 800 */
+    --font-size: 16px;
+    --font-size-introductory-paragraph: 15px;
+    --font-size-text: 0.8rem; 
+    /* *** Colors *** */
+    --color-white: #fff;
+    --color-soft-cyan-full-slider-bar: hsl(174, 77%, 80%);
+    --color-strong-cyan-slider-backround: hsl(174, 86%, 45%);
+    --color-light-grayish-red-discount-background: hsl(14, 92%, 95%);
+    --color-light-red-discount-text: hsl(15, 100%, 70%);
+    --color-pale-blue-cta-text: hsl(226, 100%, 87%);
+    --color-white-pricing-component-background: hsl (0, 0%, 100%);
+    --color-very-pale-blue-main-background: hsl(230, 100%, 99%);
+    --color-light-grayish-blue-empty-slider-bar: hsl(224, 65%, 95%);
+    --color-light-grayish-blue-toggle-background: hsl(223, 50%, 87%);
+    --color-grayish-blue-text: hsl(225, 20%, 60%);
+    --color-dark-desaturated-blue-text-and-cta-background: hsl(227, 35%, 25%);
+}
+
+/* 
+// *** *** *** Reset *** *** *** 
+*/
+html {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after { box-sizing: inherit; }
+
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+a { text-decoration: none; }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+ul, ol { margin: 0; }
+
+hr {
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+p { line-height: 1.5rem; }
+
+/* 
+// *** *** *** Site Styles *** *** *** 
+*/
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-very-pale-blue-main-background);
+}
+
+.main { 
+    width: clamp(
+        var(--w-mob-layout), 
+        100%, 
+        var(--w-desk-layout)
+    );
+    padding-block: 2.6rem;
+    background-image: url(../images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.footer { padding: 1rem; }
+
+@media screen and (min-width: 1000px) {
+    .main { padding-block: 3.85rem 5.5rem; }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/components/hero.css">
+    <link rel="stylesheet" href="./css/components/interactive-pricing.css">
+</head>
+<body>
+    <!-- HTML -->
+    <div id="root"><main id="main" class="main"></main></div>
+    <!-- Templates -->
+    <template id="interactive-pricing-template">
+        <form class="interactive-pricing" method="get">
+            <div class="interactive-pricing-hdr">
+                <div class="interactive-pricing-packages">
+                    <div class="interactive-pricing-pv">
+                        <p><span data-page-view>...</span> Pageviews</p>
+                    </div>
+                    <div class="interactive-pricing-range-slider">
+                        <input class="interactive-pricing-input-range" type="range" min="0" max="4" data-price-slider>
+                        <input type="hidden" name="price" data-price>
+                        <div class="interactive-pricing-thumb" data-thumb>
+                            <img src="./images/icon-slider.svg" alt="Icon Slider">
+                        </div>
+                    </div>
+                    <div class="interactive-pricing-cst">
+                        <p class="interactive-pricing-cst-text">
+                            <span class="interactive-pricing-cost" data-cost>
+                                ...
+                            </span> 
+                            / month
+                        </p>
+                    </div>
+                </div>
+                <div class="interactive-pricing-billing">
+                    <p class="interactive-pricing-billing-text">Monthly Billing</p>
+                    <label class="interactive-pricing-switch" data-switch>
+                        <input class="interactive-pricing-input-checkbox" type="checkbox" name="billing" data-billing>
+                    </label>
+                    <p class="interactive-pricing-billing-text">Yearly Billing</p>
+                </div>
+            </div>
+            <div class="interactive-pricing-ftr">
+                <ul class="interactive-pricing-list">
+                    <li class="interactive-pricing-list-item">
+                        <p class="interactive-pricing-list-item-text">Unlimited websites</p>
+                    </li>
+                    <li class="interactive-pricing-list-item">
+                        <p class="interactive-pricing-list-item-text">100% data ownership</p>
+                    </li>
+                    <li class="interactive-pricing-list-item">
+                        <p class="interactive-pricing-list-item-text">Email reports</p>
+                    </li>
+                </ul>
+                <input type="submit" value="Start my trial" class="interactive-pricing-btn">
+            </div>
+        </form>
+    </template>
+    <!-- JS -->
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>

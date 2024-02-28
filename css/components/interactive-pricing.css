@@ -1,0 +1,260 @@
+/* 
+// *** *** *** Interactive Pricing *** *** ***
+*/
+.interactive-pricing {
+    width: min(87.5%, 543px);
+    --p-inline: 1.5rem;
+    --p-block: 2rem;
+    margin-inline: auto;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ddd;
+}
+
+/* 
+// *** *** *** Header *** *** ***
+*/
+.interactive-pricing-hdr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.7rem;
+    padding-top: var(--p-block);
+    padding-bottom: 2.3rem;
+    padding-inline: var(--p-inline);
+    border-bottom: 1px solid var(--color-light-grayish-blue-empty-slider-bar);
+    color: var(--color-grayish-blue-text);
+}
+
+/* 
+// *** *** *** Packages *** *** ***
+*/
+.interactive-pricing-packages {
+    width: 100%;
+    text-align: center;
+}
+
+.interactive-pricing-pv {
+    margin-bottom: 0.7rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.interactive-pricing-cst {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.interactive-pricing-cst-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.interactive-pricing-cost {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-dark-desaturated-blue-text-and-cta-background);
+}
+
+/* 
+// *** *** *** Slider *** *** ***
+*/
+.interactive-pricing-range-slider { 
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1.5rem;
+    margin-bottom: 1.55rem;
+}
+
+.interactive-pricing-input-range {
+    position: relative;
+    width: 100%;
+    height: 9px;
+    border-radius: 15px;
+    appearance: none;
+    background-color: var(--color-very-pale-blue-main-background);
+}
+
+.interactive-pricing-thumb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--color-strong-cyan-slider-backround);
+    box-shadow: 0 20px 20px var(--color-soft-cyan-full-slider-bar);
+    pointer-events: none;
+}
+
+/* 
+// *** *** *** Billing *** *** ***
+*/
+.interactive-pricing-billing {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.interactive-pricing-billing-text { position: relative; }
+
+.interactive-pricing-billing-text:last-child:after {
+    content: "-25%";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 0.35rem);
+    transform: translateY(-50%);
+    display: inline-block;
+    width: max-content;
+    padding: 0.15rem 0.45rem;
+    border-radius: 10px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    line-height: normal;
+    color: var(--color-light-red-discount-text);
+    background-color: var(--color-light-grayish-red-discount-background);
+}
+
+/* 
+// *** *** *** Switch *** *** ***
+*/
+.interactive-pricing-switch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 2.7rem;
+    height: 1.4rem;
+    padding: 0.3rem;
+    border-radius: 15px;
+    background-color: var(--color-light-grayish-blue-toggle-background);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.interactive-pricing-switch:hover { background-color: var(--color-strong-cyan-slider-backround); }
+
+.interactive-pricing-switch::before {
+    display: inline-block;
+    content: "";
+    --width: 0.9rem;
+    width: var(--width);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: margin-left 0.3s ease;
+}
+
+.interactive-pricing-switch.is-active::before { margin-left: calc(100% - var(--width)); }
+
+.interactive-pricing-input-checkbox { display: none; }
+
+/* 
+// *** *** *** Footer *** *** ***
+*/
+.interactive-pricing-ftr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    padding-top: 1.25rem;
+    padding-bottom: var(--p-block);
+    padding-inline: var(--p-inline);
+}
+
+.interactive-pricing-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-left: 0;
+    text-align: center;
+    list-style-position: inside;
+    list-style-image: url(../../images/icon-check.svg);
+}
+
+.interactive-pricing-list-item-text {
+    display: inline-block;
+    margin-left: 0.35rem;
+    font-size: var(--font-size-text);
+    font-weight: 500;
+    color: var(--color-grayish-blue-text);
+} 
+
+.interactive-pricing-btn {
+    padding: 0.8rem 2.8rem;
+    border: none;
+    border-radius: 30px;
+    font-size: var(--font-size-text);
+    font-weight: 600;
+    color: var(--color-light-grayish-blue-toggle-background);
+    background-color: var(--color-dark-desaturated-blue-text-and-cta-background);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+    /* 
+    // *** *** *** Interactive Pricing *** *** ***
+    */
+    .interactive-pricing { 
+        --p-block: 3.45rem;
+        --p-inline: 3rem; 
+    }
+
+    /* 
+    // *** *** *** Header *** *** ***
+    */
+    .interactive-pricing-hdr { row-gap: 1.85rem; }
+
+    /* 
+    // *** *** *** Packages *** *** ***
+    */
+    .interactive-pricing-packages {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas: 
+            "a b"
+            "c c";
+        row-gap: 1.85rem;
+        text-align: initial;
+    }
+
+    .interactive-pricing-packages > * { margin-bottom: 0; }
+    .interactive-pricing-pv { grid-area: a; }
+    .interactive-pricing-cst { grid-area: b; }
+    .interactive-pricing-range-slider { grid-area: c; }
+
+    .interactive-pricing-pv { font-size: 0.85rem; }
+
+    .interactive-pricing-cst { font-size: 1rem; }
+    .interactive-pricing-cst-text { justify-content: flex-end; }
+    .interactive-pricing-cost { font-size: 2.4rem; }
+
+    /* 
+    // *** *** *** Billing *** *** ***
+    */
+    .interactive-pricing-billing-text:last-child:after { content: "25% discount"; }
+
+    /* 
+    // *** *** *** Footer *** *** ***
+    */
+    .interactive-pricing-ftr {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        padding-block: 1.8rem;
+    }
+
+    .interactive-pricing-list { text-align: left; }
+}
